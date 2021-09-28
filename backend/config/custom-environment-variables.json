@@ -1,0 +1,13 @@
+{
+  "port": "PORT",
+  "mongo": {
+    "uri": "MONGODB_URI",
+    "dbName": "MONGODB_DBNAME",
+    "user": "MONGODB_USER",
+    "pass": "MONGODB_PASS"
+  },
+  "telegram": {
+    "chatId": "TELEGRAM_CHAT_ID",
+    "token": "TELEGRAM_TOKEN"
+  }
+}

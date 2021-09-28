@@ -1,0 +1,104 @@
+@font-face {
+    font-family: BalsamiqSans;
+    src: url("fonts/BalsamiqSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: BalsamiqSans;
+    src: url("fonts/BalsamiqSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: BalsamiqSans;
+    src: url("fonts/BalsamiqSans-BoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: BalsamiqSans;
+    src: url("fonts/BalsamiqSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: NunitoSans;
+    src: url("fonts/NunitoSans-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: NunitoSans;
+    src: url("fonts/NunitoSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: NunitoSans;
+    src: url("fonts/NunitoSans-Black.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: NunitoSans;
+    src: url("fonts/NunitoSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --button-padding: 15px 47px;
+    --button-padding-small: 13px 35px;
+    --font-family-BalsamiqSans: "BalsamiqSans", sans-serif;
+    --font-family-NunitoSans: "NunitoSans", sans-serif;
+
+    --font-size-smallest: 12px;
+    --font-size-small: 14px;
+    --font-size-base: 16px;
+    --font-size-medium: 18px;
+    --font-size-middle: 20px;
+    --font-size-big: 25px;
+    --font-size-large: 28px;
+    --font-size-heading-smallest: 30px;
+    --font-size-heading-small: 43px;
+    --font-size-heading-medium: 48px;
+    --font-size-heading-middle: 55px;
+    --font-size-heading-huge: 64px;
+
+    --color-green: #3F8C84;
+    --color-white: #ffffff;
+    --color-red: #FF4B23;
+    --color-light-red: #f4e8e8;
+    --color-brown: #935010;
+    --color-carrot: #FDE4CC;
+    --color-light-orange: #FFBB79;
+    --color-apricot-orange: #FDE4CC;
+    --color-orange: #FA7F08;
+    --color-orange-hover: #F96F21;
+    --color-gray: #878787;
+    --color-gray-overlay: rgba(0,0,0,.5);
+    --color-dark-gray: #3D424B;
+    --color-middle-gray: #D7D7D7;
+    --color-light-gray: #F9F9F9;
+    --color-light-smoky-gray: #F5F5F5;
+    --color-aluminum-gray: #A8ACB980;
+    --color-light-beige: #ECECEC;
+    --color-blue: #2B69D8;
+    --color-black: #000000;
+
+    --border-radius: 32px;
+    --border-modal-radius: 24px;
+
+    --z-index-tooltip: 100;
+    --z-index-modal: 200;
+    --z-index-header: 300;
+    --z-index-loader: 400;
+}

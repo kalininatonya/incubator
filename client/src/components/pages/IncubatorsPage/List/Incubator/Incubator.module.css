@@ -1,0 +1,416 @@
+.container {
+    display: grid;
+    grid-template-rows: 30px 1fr 75px;
+    padding: 15px 24px;
+    margin-bottom: 20px;
+    background-color: var(--color-light-gray);
+    border-radius: var(--border-radius);
+}
+
+.birdContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bird {
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-large);
+    font-weight: 700;
+    color: var(--color-dark-gray);
+}
+
+.partNumber {
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    color: var(--color-gray);
+}
+
+.mainContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    margin: 10px 0;
+}
+
+.dateTimeContainer {
+    display: grid;
+    grid-template-rows: 45px 20px;
+    grid-template-columns: 125px 200px 125px;
+    grid-gap: 3px;
+    align-items: center;
+    text-align: center;
+}
+
+.date {
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-big);
+    font-weight: 400;
+    color: var(--color-dark-gray);
+}
+
+.line,
+.lineContainer {
+    display: flex;
+    justify-content: center;
+    margin: 0 10px 0 5px;
+    width: 100%;
+    height: 6px;
+}
+
+.lineProgress {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-color: var(--color-green);
+}
+
+.lineRest {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background-color: var(--color-middle-gray);
+}
+
+.lineBorder,
+.lineForFuture,
+.lineArchive {
+    border-radius: 3px;
+}
+
+.lineForFuture {
+    background-color: var(--color-middle-gray);
+}
+
+.lineArchive {
+    background-color: var(--color-green);
+}
+
+.leftTimeContainer,
+.rightTimeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.time {
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-medium);
+    font-weight: 400;
+    color: var(--color-dark-gray);
+}
+
+.restDays {
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    color: var(--color-gray);
+}
+
+.settingCount,
+.setting {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.icon {
+    margin-right: 5px;
+}
+
+.textSettingBold,
+.textBold {
+    margin-right: 5px;
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-dark-gray);
+}
+
+.count,
+.temperature,
+.humidity,
+.temperatureForSmallScreens,
+.humidityForSmallScreens {
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-medium);
+    font-weight: 400;
+    color: var(--color-dark-gray);
+}
+
+.temperatureForSmallScreens,
+.humidityForSmallScreens {
+    display: none;
+}
+
+.warning {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.buttonsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linkViewBirdSettings {
+    composes: baseButton from "../../../../App/styles.css";
+    padding: var(--button-padding);
+    text-decoration: none;
+    color: var(--color-orange);
+    border: 2px solid var(--color-orange);
+    background-color: var(--color-white);
+}
+
+.linkViewBirdSettings:hover {
+    color: var(--color-white);
+    background-color: var(--color-orange-hover);
+}
+
+.iconViewContainer {
+    display: none;
+}
+
+.buttonDelete {
+    border: none;
+    background: none;
+}
+
+@media (max-width: 1250px) {
+    .linkViewBirdSettings {
+        padding: var(--button-padding-small);
+    }
+}
+
+@media (max-width: 900px) {
+    .temperature,
+    .humidity {
+        display: none;
+    }
+
+    .count,
+    .temperatureForSmallScreens,
+    .humidityForSmallScreens {
+        display: block;
+        font-size: var(--font-size-base);
+    }
+
+    .dateTimeContainer {
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        grid-gap: 0;
+    }
+
+    .date {
+        font-size: var(--font-size-medium);
+    }
+}
+
+@media (max-width: 800px) {
+    .dateTimeContainer {
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        grid-gap: 0;
+    }
+
+    .time {
+        font-size: var(--font-size-base);
+    }
+
+    .restDays {
+        font-size: var(--font-size-small);
+    }
+}
+
+@media (max-width: 700px) {
+    .mainContainer {
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
+
+    .settingsContainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .settingCount {
+        order: 3;
+    }
+
+    .settingCount,
+    .setting {
+        margin: 10px 45px 10px 5px;
+    }
+
+    .textSettingBold {
+        display: none;
+    }
+
+    .warning {
+        justify-content: center;
+        margin-left: 0;
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: var(--font-size-small);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-rows: 30px 1fr 65px;
+        margin-bottom: 10px;
+        padding: 0 0 10px 0;
+        background: none;
+        border-radius: 0;
+        border-bottom: 1px solid var(--color-middle-gray);
+    }
+
+    .bird {
+        font-size: var(--font-size-big);
+    }
+
+    .partNumber {
+        font-size: var(--font-size-small);
+    }
+
+    .mainContainer {
+        grid-template-columns: 1fr;
+        margin: 0;
+    }
+
+    .dateTimeContainer {
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0;
+    }
+
+    .leftTimeContainer,
+    .rightTimeContainer {
+        margin-left: 0;
+    }
+
+    .date {
+        font-size: var(--font-size-base);
+    }
+
+    .line,
+    .lineContainer {
+        height: 3px;
+    }
+
+    .restDays {
+        font-size: var(--font-size-smallest);
+    }
+
+    .settingCount,
+    .setting {
+        margin: 10px 5px;
+    }
+
+    .count,
+    .temperatureForSmallScreens,
+    .humidityForSmallScreens {
+        font-size: var(--font-size-small);
+    }
+}
+
+@media (max-width: 355px) {
+    .bird {
+        font-size: var(--font-size-medium);
+    }
+
+    .date {
+        font-size: var(--font-size-small);
+    }
+
+    .time {
+        font-size: var(--font-size-smallest);
+    }
+
+    .count,
+    .temperatureForSmallScreens,
+    .humidityForSmallScreens,
+    .partNumber {
+        font-size: var(--font-size-smallest);
+    }
+}
+
+@media (max-width: 285px) {
+    .container {
+        display: block;
+    }
+
+    .mainContainer {
+        order: 1;
+    }
+
+    .dateTimeContainer {
+        grid-template-columns: 1fr 15px 1fr;
+        grid-template-rows: 25px 25px 25px;
+    }
+
+    .leftTimeContainer {
+        grid-column: 1/4;
+    }
+
+    .line,
+    .rightTimeContainer {
+        display: none;
+    }
+
+    .lineContainer {
+        display: contents;
+        margin: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .lineContainer:before {
+        content: "\2013";
+        margin-bottom: 5px;
+    }
+
+    .restDays {
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+
+    .linkAddBird {
+        display: block;
+        padding: 10px;
+    }
+
+    .linkViewBirdSettings {
+        display: none;
+    }
+
+    .buttonsContainer {
+        justify-content: center;
+    }
+
+    .iconViewContainer {
+        position: relative;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .iconEye {
+        position: absolute;
+        bottom: 8px;
+        left: 8px;
+    }
+
+    .iconEye > svg > path {
+        stroke: var(--color-orange);
+    }
+
+    .settingsContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .settingCount,
+    .setting {
+        margin: 0;
+    }
+}

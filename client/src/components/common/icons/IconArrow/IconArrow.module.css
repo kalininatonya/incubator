@@ -1,0 +1,18 @@
+.iconArrow {
+    width: 14px;
+    height: 14px;
+}
+
+@media (max-width: 480px) {
+    .iconArrow {
+        width: 13px;
+        height: 13px;
+    }
+}
+
+@media (max-width: 285px) {
+    .iconArrow {
+        width: 10px;
+        height: 10px;
+    }
+}

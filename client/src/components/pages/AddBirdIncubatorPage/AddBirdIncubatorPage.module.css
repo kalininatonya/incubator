@@ -1,0 +1,16 @@
+.addContainer {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 400px) {
+    .addContainer {
+        /*padding: 10px;
+        margin: 0;
+        border-radius: 0;*/
+    }
+
+    .heading {
+
+    }
+}

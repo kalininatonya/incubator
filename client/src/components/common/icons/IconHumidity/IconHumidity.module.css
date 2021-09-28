@@ -1,0 +1,11 @@
+.iconHumidity {
+    width: 20px;
+    height: 21px;
+}
+
+@media (max-width: 480px) {
+    .iconHumidity {
+        width: 13px;
+        height: 14px;
+    }
+}

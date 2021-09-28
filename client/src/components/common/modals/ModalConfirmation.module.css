@@ -1,0 +1,150 @@
+.modalContainer {
+    position: fixed;
+    top: 0;
+}
+
+.modalOverlay {
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-gray-overlay);
+    opacity: 50%;
+}
+
+.modalContent {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 30%;
+    max-width: 550px;
+    min-width: 245px;
+    margin: auto;
+    padding: 20px;
+    z-index: var(--z-index-modal);
+    text-align: center;
+    background-color: var(--color-white);
+    border-radius: var(--border-modal-radius);
+}
+
+.modalQuestionContainer {
+    display: flex;
+    align-items: flex-start;
+}
+
+.modalIconClose {
+    margin: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.modalIconClose:hover {
+    transform: scale(1.2);
+}
+
+.modalQuestion {
+    font-family: var(--font-family-NunitoSans);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px;
+    text-align: center;
+    font-size: var(--font-size-large);
+    color: var(--color-black);
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnDelete {
+    composes: baseButton from "../../App/styles.css";
+    padding: var(--button-padding);
+    margin: 24px 0 16px 0;
+    cursor: pointer;
+    color: var(--color-white);
+    background-color: var(--color-red);
+}
+
+.btnDelete:hover {
+    background-color: var(--color-orange-hover);
+}
+
+.returnLink {
+    composes: baseLink from "../../App/styles.css";
+    margin-bottom: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+@media (max-width: 1250px) {
+    .modalQuestion {
+        font-size: var(--font-size-big);
+    }
+}
+
+@media (max-width: 700px) {
+    .modalContent {
+        max-width: 490px;
+    }
+
+    .modalQuestionContainer {
+        justify-content: space-between;
+    }
+
+    .modalIconClose {
+        margin: 5px 0 5px 5px;
+    }
+
+    .modalQuestion {
+        font-size: var(--font-size-middle);
+    }
+}
+
+@media (max-width: 600px) {
+    .modalContent {
+        max-width: 415px;
+    }
+
+    .modalQuestion {
+        font-size: var(--font-size-medium);
+    }
+
+    .btnDelete {
+        margin: 10px;
+    }
+
+    .returnLink {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .modalContent {
+       top: 15%;
+    }
+
+    .modalOverlay {
+        background-color: var(--color-white);
+        opacity: 100%;
+    }
+
+    .modalIconClose {
+        display: none;
+    }
+
+    .btnDelete {
+        padding: var(--button-padding-small);
+    }
+}
+
+@media (max-width: 285px) {
+    .modalContent {
+        min-width: 0;
+    }
+
+    .modalQuestion {
+        font-size: var(--font-size-base);
+    }
+}

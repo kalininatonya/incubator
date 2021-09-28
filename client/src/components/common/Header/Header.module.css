@@ -1,0 +1,104 @@
+.headerContainer {
+    width: 100%;
+    background-color: var(--color-white);
+}
+
+.headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 23px 40px;
+}
+
+.iconLogo {
+    width: 173px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.userNameContainer {
+    display: flex;
+    align-items: center;
+}
+
+.userName {
+    margin-right: 10px;
+    font-size: var(--font-size-base);
+    font-family: var(--font-family-NunitoSans);
+    font-weight: 700;
+    color: var(--color-gray);
+}
+
+.archiveContainer {
+    display: none;
+}
+
+.iconExit {
+    cursor: pointer;
+}
+
+.line {
+    margin: 0 40px;
+    border-bottom: 2px solid var(--color-carrot);
+}
+
+
+@media (max-width: 700px) {
+    .line {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .headerContainer {
+        z-index: var(--z-index-header);
+    }
+
+    .headerWrapper {
+        padding: 15px 20px;
+    }
+
+    .iconLogo {
+        width: 120px;
+        height: 23px;
+    }
+
+    .archiveContainer {
+        display: flex;
+        position: relative;
+        margin: 0 15px;
+        cursor: pointer;
+    }
+
+    .countArchiveIncubators {
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+        padding: 1px 2px;
+        font-family: var(--font-family-NunitoSans);
+        font-size: var(--font-size-smallest);
+        font-weight: 700;
+        color: var(--color-white);
+        background-color: var(--color-orange);
+        border-radius: 10px;
+    }
+
+    .userName {
+        display: none;
+    }
+}
+
+@media (max-width: 285px) {
+    .headerWrapper {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .userNameContainer {
+        margin: 10px 0 0 0;
+    }
+
+    .line {
+        margin: 0 10px;
+    }
+}

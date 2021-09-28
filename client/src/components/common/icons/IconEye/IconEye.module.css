@@ -1,0 +1,17 @@
+.iconEye {
+  width: 28px;
+  height: 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .iconEye {
+    width: 20px;
+  }
+}
+
+@media (max-width: 285px) {
+  .iconEye {
+    width: 16px;
+  }
+}

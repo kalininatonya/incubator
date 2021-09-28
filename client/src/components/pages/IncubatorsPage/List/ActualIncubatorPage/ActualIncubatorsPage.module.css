@@ -1,0 +1,131 @@
+.container {
+    margin: 15px 40px 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+}
+
+.headingContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading {
+    composes: baseHeading from "../../../../App/styles.css";
+}
+
+.linkAddBirdContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.archiveContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.countArchiveIncubators {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    padding: 1px 2px;
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-smallest);
+    font-weight: 700;
+    color: var(--color-white);
+    background-color: var(--color-orange);
+    border-radius: 10px;
+}
+
+.archiveText {
+    margin-left: 9px;
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-dark-gray);
+}
+
+.linkAddBird {
+    composes: baseButton from "../../../../App/styles.css";
+    padding: var(--button-padding);
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--color-orange);
+}
+
+.linkAddBird:hover {
+    background-color: var(--color-orange-hover);
+}
+
+.list {
+    grid-column: 1 / 4;
+}
+
+@media (max-width: 1250px) {
+    .archiveContainer {
+        margin-right: 15px;
+    }
+
+    .linkAddBird {
+        display: block;
+        padding: var(--button-padding-small);
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin: 0 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 100px 1fr;
+    }
+
+    .headingContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .heading {
+        margin-bottom: 15px;
+    }
+
+    .linkAddBirdContainer {
+        grid-row: 2/3;
+        justify-content: start;
+    }
+
+    .linkAddBird {
+        margin-right: 20px;
+    }
+
+    .archiveContainer {
+        order: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-rows: 100px 1fr 100px;
+    }
+
+    .archiveContainer {
+        display: none;
+    }
+
+    .linkAddBirdContainer {
+        grid-row: 3/4;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 285px) {
+    .container {
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,11 @@
+.iconTemperature {
+    width: 18px;
+    height: 19px;
+}
+
+@media (max-width: 480px) {
+    .iconTemperature {
+        width: 13px;
+        height: 14px;
+    }
+}

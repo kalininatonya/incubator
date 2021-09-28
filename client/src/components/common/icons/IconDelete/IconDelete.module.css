@@ -1,0 +1,12 @@
+.iconDelete {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .iconDelete {
+        width: 32px;
+        height: 32px;
+    }
+}

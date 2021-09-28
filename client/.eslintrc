@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    "react-hooks"
+  ],
+  "extends": [
+    "react-app",
+    "react-app/jest"
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error", // Проверяем правила хуков
+    "react-hooks/exhaustive-deps": "warn",
+    "quotes": [
+      "error",
+      "single"
+    ]
+  }
+}

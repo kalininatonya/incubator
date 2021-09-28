@@ -1,0 +1,117 @@
+.selectContainer {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+}
+
+/* user-select -- это нестандартное свойство, поэтому нужны префиксы
+Отмена выделения текста при клике*/
+.selectContainer {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.input {
+    composes: baseInput from "../../App/styles.css";
+    flex-grow: 1;
+    padding: 15px 20px 15px 35px;
+    color: var(--color-gray);
+    cursor: pointer;
+}
+
+.iconStarContainer {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+
+.iconDownContainer {
+    display: flex;
+    position: absolute;
+    top: 16px;
+    right: 25px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.isOpen {
+    transform: rotate(180deg);
+}
+
+.value {
+    width: 100%;
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    color: var(--color-gray);
+}
+
+.optionsContainer {
+    width: 200px;
+    box-sizing: border-box;
+    outline: 1px solid var(--color-light-beige);
+    border-radius: 18px;
+}
+
+.optionsContainer:focus {
+    border: 2px solid red;
+}
+
+.option {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    color: var(--color-dark-gray);
+}
+
+.hoverOption,
+.option:hover {
+    background-color: var(--color-light-smoky-gray);
+}
+
+.option:last-child:hover {
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+
+.option:first-child {
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+}
+
+.selectedOption {
+    background-color: var(--color-apricot-orange);
+}
+
+.selectedOption:hover {
+    background-color: var(--color-apricot-orange);
+}
+
+.selectedOption:first-child {
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+}
+
+.selectedOption:first-child:hover {
+    border-top-right-radius: 18px;
+    border-top-left-radius: 18px;
+}
+
+.selectedOption:last-child {
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+
+.selectedOption:last-child:hover {
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+}
+
+.errorInput {
+    composes: baseErrorField from "../../App/styles.css";
+}
+

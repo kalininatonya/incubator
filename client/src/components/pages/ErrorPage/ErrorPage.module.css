@@ -1,0 +1,52 @@
+.container {
+    margin: 0 40px 0 65px;
+}
+
+.heading {
+    composes: baseHeading from "../../App/styles.css";
+    text-align: center;
+}
+
+.description {
+    margin: 0 95px;
+    text-align: center;
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-large);
+    font-weight: 400;
+    color: var(--color-gray);
+}
+
+.update {
+    composes: baseLink from "../../App/styles.css";
+    font-size: var(--font-size-large);
+    background: none;
+    border: none;
+}
+
+@media (max-width: 900px) {
+    .container {
+        margin: 15px;
+    }
+
+    .description {
+        margin: 0 40px;
+        font-size: var(--font-size-medium);
+    }
+
+    .update {
+        font-size: var(--font-size-medium);
+    }
+}
+
+@media (max-width: 480px) {
+    .description {
+        margin: 0;
+    }
+}
+
+@media (max-width: 355px) {
+    .update,
+    .description {
+        font-size: var(--font-size-base);
+    }
+}

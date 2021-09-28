@@ -1,0 +1,10 @@
+.iconStar {
+    width: 9px;
+    height: 8px;
+}
+
+@media (max-width: 285px) {
+    .iconStar {
+        width: 8px;
+    }
+}

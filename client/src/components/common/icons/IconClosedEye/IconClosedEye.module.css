@@ -1,0 +1,19 @@
+.iconClosedEye {
+  width: 30px;
+  height: 20px;
+  fill: var(--color-gray);
+}
+
+@media (max-width: 480px) {
+  .iconClosedEye {
+    width: 20px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 285px) {
+  .iconClosedEye {
+    width: 16px;
+  }
+}
+

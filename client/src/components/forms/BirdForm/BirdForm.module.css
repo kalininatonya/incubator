@@ -1,0 +1,208 @@
+.heading {
+    composes: baseHeading from "../../App/styles.css";
+    text-align: center;
+}
+
+.formContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+}
+
+.count,
+.breed,
+.bird,
+.date,
+.time {
+    margin-bottom: 20px;
+}
+
+.count,
+.time {
+    margin-left: 20px;
+}
+
+.selectContainer:focus {
+    outline: 1px solid var(--color-light-orange);
+    border-radius: var(--border-radius);
+}
+
+.breed,
+.descriptionContainer {
+    grid-column: 1 / 3;
+}
+
+.description {
+    composes: baseTextarea from "../../App/styles.css";
+    width: 100%;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    color: var(--color-gray);
+    cursor: pointer;
+    resize: none;
+}
+
+.requiredTextContainer {
+    margin: 5px;
+}
+
+.requiredText {
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.errorText {
+    composes: baseErrorText from "../../App/styles.css";
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.commonErrors {
+    composes: baseErrorText from "../../App/styles.css";
+    grid-column: 1 / 3;
+    text-align: center;
+}
+
+.btnContainer {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.btnSave,
+.btnCancel,
+.btnNext,
+.btnBack {
+    composes: baseButton from "../../App/styles.css";
+    padding: var(--button-padding);
+}
+
+.btnSave,
+.btnNext {
+    margin-right: 15px;
+    color: var(--color-white);
+    background-color: var(--color-orange);
+    outline: 2px solid var(--color-orange);
+}
+
+.btnSave:hover,
+.btnNext:hover {
+    outline: 2px solid var(--color-orange-hover);
+}
+
+.btnCancel,
+.btnBack {
+    color: var(--color-orange);
+    background-color: var(--color-white);
+    outline: 2px solid var(--color-orange);
+}
+
+.btnCancel:hover,
+.btnBack:hover {
+    color: var(--color-white);
+}
+
+.btnNext,
+.btnBack {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .formContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .count,
+    .breed,
+    .bird,
+    .date,
+    .time,
+    .descriptionContainer {
+        display: none;
+        width: 335px;
+    }
+
+    .count,
+    .breed,
+    .bird,
+    .date {
+        margin-bottom: 15px;
+    }
+
+    .count,
+    .time {
+        margin-left: 0;
+    }
+
+    .time {
+        margin-bottom: 0;
+    }
+
+    .fieldVisible {
+        display: block;
+    }
+
+    .btnContainer {
+        display: flex;
+        justify-content: center;
+        margin: 10px 10px 43px 10px;
+    }
+
+    .btnSave,
+    .btnCancel,
+    .btnNext,
+    .btnBack {
+        display: none;
+    }
+
+    .btnVisible {
+        display: block;
+        padding: var(--button-padding-small);
+        margin-left: 20px;
+    }
+
+    .requiredTextContainer {
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    .requiredText {
+        font-size: var(--font-size-small);
+    }
+}
+
+@media (max-width: 355px) {
+    .count,
+    .breed,
+    .bird,
+    .date,
+    .time,
+    .descriptionContainer {
+        width: 285px;
+    }
+}
+
+@media (max-width: 325px) {
+    .btnContainer {
+        margin: 8px 10px 23px 10px;
+    }
+}
+
+@media (max-width: 285px) {
+    .formContainer {
+        margin: 10px;
+    }
+
+    .count,
+    .breed,
+    .bird,
+    .date,
+    .time,
+    .descriptionContainer {
+        width: 235px;
+    }
+}

@@ -1,0 +1,18 @@
+.iconCalendar {
+    width: 24px;
+    height: 24px;
+}
+
+@media (max-width: 480px) {
+    .iconCalendar {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 285px) {
+    .iconCalendar {
+        width: 17px;
+        height: 17px;
+    }
+}

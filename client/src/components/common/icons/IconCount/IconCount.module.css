@@ -1,0 +1,10 @@
+.iconCount {
+    width: 22px;
+    height: 19px;
+}
+
+@media (max-width: 480px) {
+    .iconCount {
+        height: 15px;
+    }
+}

@@ -1,0 +1,207 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 24px;
+    margin-bottom: 10px;
+    background-color: var(--color-light-gray);
+    border-radius: var(--border-radius);
+}
+
+.currentDay {
+    background-color: var(--color-carrot);
+}
+
+.dateContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.dateContainer::before {
+    content: '';
+    width: 100%;
+    order: 1;
+}
+
+.day {
+    margin-right: 10px;
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-big);
+    font-weight: 400;
+    color: var(--color-dark-gray);
+}
+
+.date {
+    margin-right: 10px;
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-medium);
+    font-weight: 400;
+    color: var(--color-gray);
+}
+
+.timeContainer {
+    display: flex;
+    order: 1;
+}
+
+.time {
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    color: var(--color-dark-gray);
+}
+
+.descriptionContainer {
+    margin: 0;
+}
+
+.description {
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-base);
+    color: var(--color-dark-gray);
+}
+
+.description::marker {
+    color: var(--color-orange);
+}
+
+.setting {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon {
+    margin-right: 5px;
+}
+
+.textSettingBold {
+    margin-right: 5px;
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-dark-gray);
+}
+
+.temperature,
+.humidity,
+.temperatureForSmallScreens,
+.humidityForSmallScreens {
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-medium);
+    font-weight: 400;
+    color: var(--color-dark-gray);
+}
+
+.temperatureForSmallScreens,
+.humidityForSmallScreens {
+    display: none;
+}
+
+@media (max-width: 1250px) {
+    .day {
+        font-size: var(--font-size-middle);
+    }
+
+    .temperature,
+    .humidity {
+        font-size: var(--font-size-base);
+    }
+}
+
+@media (max-width: 900px) {
+    .date {
+        font-size: var(--font-size-medium);
+    }
+
+    .temperature,
+    .humidity {
+        display: none;
+    }
+
+    .temperatureForSmallScreens,
+    .humidityForSmallScreens {
+        display: block;
+        font-size: var(--font-size-base);
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .dateContainer {
+        margin-bottom: 15px;
+    }
+
+    .time {
+        font-size: var(--font-size-base);
+    }
+
+    .settingsContainer {
+        display: flex;
+    }
+
+    .setting {
+        margin-right: 20px;
+    }
+
+    .textSettingBold {
+        display: none;
+    }
+
+    .descriptionContainer {
+        padding: 0;
+        margin-left: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-bottom: 10px;
+        padding: 0 0 10px 0;
+        background: none;
+        border-radius: 0;
+        border-bottom: 1px solid var(--color-middle-gray);
+    }
+
+    .currentDay {
+        border-bottom: 2px solid var(--color-orange);
+    }
+
+    .day {
+        font-family: var(--font-family-NunitoSans);
+        font-size: var(--font-size-base);
+        font-weight: 700;
+        color: var(--color-dark-gray);
+    }
+
+    .date {
+        order: 1;
+        font-size: var(--font-size-base);
+    }
+
+    .timeContainer {
+        order: 2;
+    }
+
+    .description,
+    .temperatureForSmallScreens,
+    .humidityForSmallScreens {
+        font-size: var(--font-size-small);
+    }
+}
+
+@media (max-width: 355px) {
+    .date {
+        font-size: var(--font-size-small);
+    }
+
+    .time,
+    .description,
+    .temperatureForSmallScreens,
+    .humidityForSmallScreens {
+        font-size: var(--font-size-smallest);
+    }
+}

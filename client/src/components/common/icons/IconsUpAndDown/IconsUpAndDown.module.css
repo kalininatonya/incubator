@@ -1,0 +1,21 @@
+.iconUp,
+.iconDown {
+    width: 13px;
+    height: 8px;
+}
+
+@media (max-width: 480px) {
+    .iconUp,
+    .iconDown {
+        width: 11px;
+        height: 6px;
+    }
+}
+
+@media (max-width: 285px) {
+    .iconUp,
+    .iconDown {
+        width: 9px;
+        height: 5px;
+    }
+}

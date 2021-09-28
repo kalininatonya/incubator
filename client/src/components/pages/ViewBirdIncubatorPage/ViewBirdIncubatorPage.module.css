@@ -1,0 +1,142 @@
+.container {
+    margin: 55px 40px 0 40px;
+}
+
+.actualLink {
+    composes: baseLink from "../../App/styles.css";
+}
+
+.headContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headingContainer {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.heading {
+    composes: baseHeading from "../../App/styles.css";
+    margin: 0 25px 0 0;
+}
+
+.partNumber {
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    color: var(--color-gray);
+}
+
+.downloadLinkContainer {
+    display: flex;
+    align-items: center;
+}
+
+.downloadIcon {
+    margin-right: 5px;
+}
+
+.downloadLink {
+    composes: baseLink from "../../App/styles.css";
+}
+
+.incubatorContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.infoAboutIncubator {
+    display: flex;
+    margin-bottom: 8px;
+}
+
+.icon {
+    margin-right: 5px;
+}
+
+.textBold {
+    margin-right: 5px;
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--color-dark-gray);
+}
+
+.text {
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-medium);
+    font-weight: 400;
+    color: var(--color-dark-gray);
+}
+
+@media (max-width: 900px) {
+    .text {
+        font-size: var(--font-size-base);
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        margin: 30px 20px 0 20px;
+    }
+
+    .headingContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .textBold {
+        font-size: var(--font-size-small);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 10px 20px 0 20px;
+    }
+
+    .incubatorContainer {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        margin-bottom: 20px;
+    }
+
+    .partNumber {
+        font-size: var(--font-size-small);
+    }
+
+    .downloadLink {
+        display: none;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .text {
+        font-size: var(--font-size-base);
+    }
+}
+
+@media (max-width: 355px) {
+    .partNumber {
+        font-size: var(--font-size-smallest);
+    }
+
+    .text {
+        font-size: var(--font-size-small);
+    }
+}
+
+@media (max-width: 285px) {
+    .container {
+        margin: 20px 10px 0 10px;
+    }
+}

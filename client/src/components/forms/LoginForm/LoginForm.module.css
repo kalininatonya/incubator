@@ -1,0 +1,104 @@
+.heading {
+    composes: baseHeading from "../../App/styles.css";
+    text-align: center;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.login,
+.password {
+    width: 400px;
+    margin-bottom: 15px;
+}
+
+.btnContainer {
+    margin: 20px;
+}
+
+.btnSave {
+    composes: baseButton from "../../App/styles.css";
+    padding: var(--button-padding);
+    color: var(--color-white);
+    background-color: var(--color-orange);
+}
+
+.linkContainer {
+    margin: 0 20px;
+}
+
+.question {
+    margin-right: 10px;
+    font-family: var(--font-family-NunitoSans);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    color: var(--color-dark-gray);
+}
+
+.link {
+    composes: baseLink from "../../App/styles.css";
+}
+
+.errorText {
+    composes: baseErrorText from "../../App/styles.css";
+    margin: 5px;
+}
+
+.errorInput {
+    margin-bottom: 0;
+}
+
+@media (max-width: 480px) {
+    .login,
+    .password {
+        width: 335px;
+    }
+
+    .btnContainer {
+        margin: 10px 10px 43px 10px;
+    }
+
+    .linkContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .question {
+        margin-bottom: 5px;
+        margin-right: 0;
+        font-size: var(--font-size-small);
+    }
+
+    .btnSave {
+        padding: var(--button-padding-small);
+    }
+}
+
+@media (max-width: 355px) {
+    .login,
+    .password {
+        width: 285px;
+    }
+}
+
+@media (max-width: 325px) {
+    .btnContainer {
+        margin: 8px 10px 23px 10px;
+    }
+}
+
+@media (max-width: 285px) {
+    .formContainer {
+        margin: 10px;
+    }
+
+    .login,
+    .email,
+    .password {
+        width: 170px;
+    }
+}

@@ -1,0 +1,19 @@
+.iconDown {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .iconDown {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 285px) {
+    .iconDown {
+        width: 17px;
+        height: 17px;
+    }
+}

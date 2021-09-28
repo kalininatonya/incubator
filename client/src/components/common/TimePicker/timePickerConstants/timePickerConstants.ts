@@ -1,0 +1,1 @@
+export const PART_OF_VISIBLE_TIME = 2;
